@@ -15,6 +15,10 @@ describe("Social Sequelzie Test", () => {
     await db.sync({ force: true }); // clears whole database
   });
 
+  afterEach(async () => {
+    await db.sync({ force: true }); // clears whole database
+  });
+
   describe("User tests:", () => {
     it("User is assosiated correctly with Profile", async () => {
       await User.create({
